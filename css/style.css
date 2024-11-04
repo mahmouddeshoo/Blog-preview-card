@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Figtree", sans-serif;
+}
+:root{
+    --primaryColor: #f4d04e;
+    --secoudaryColor: #ffffff;
+    --textColor: #121212;
+    --pColor: #6b6b6b;
+}
+.container{
+    background-color: var(--primaryColor);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blog_card{
+    background-color: var(--secoudaryColor);
+    width: 25%;
+    padding: 20px;
+    border: 1px solid #121212;
+    border-radius: 20px;
+    position: relative;
+}
+.blog_card::before{
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    right: 0;
+    bottom: 0;
+    background-color: var(--textColor);
+    border-radius: 20px;
+    z-index:-1;
+}
+.bolg_card_img{
+    width: 100%;
+}
+.bolg_card_img img{
+    width: 100%;
+    border-radius: 10px;
+}
+.blog_card_date{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+}
+.blog_card_date a{
+    background-color: var(--primaryColor);
+    color: var(--textColor);
+    font-size: 1rem;
+    font-weight: 800;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.blog_card_title{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.blog_card_title a{
+    color: var(--textColor);
+    text-wrap: nowrap;
+    font-size: 1.5rem;
+    font-weight: 800;
+    transition: 0.7s all 0.3s ease;
+}
+.blog_card_title a:hover{
+    color: var(--primaryColor);
+}
+.blog_card_title p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--pColor);
+}
+.blog_card_auther{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.blog_card_auther img{
+    width: 10%;
+}
+.blog_card_auther p{
+    font-size: 1rem;
+    font-weight: 800;
+}
+/* starting responsive style */
+@media (max-width: 1080px){
+    .blog_card{
+        width: 45%;
+    }
+ 
+}
+@media (max-width: 780px){
+    .blog_card{
+        width: 60%;
+    }
+}
+@media (max-width: 600px){
+    .blog_card{
+        width: 90%;
+    }
+    .blog_card_title a{
+        font-size: 1.2rem;
+        width: 100%;
+    }
+}
